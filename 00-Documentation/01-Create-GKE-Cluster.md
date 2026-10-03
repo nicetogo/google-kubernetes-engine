@@ -38,7 +38,7 @@ gcloud container clusters create gke-dev \
   --enable-autoscaling \
   --min-nodes 1 \
   --max-nodes 3 \
-  --machine-type e2-micro \
+  --machine-type e2-medium \
   --spot \
   --disk-size 30GB \
   --disk-type pd-standard \
