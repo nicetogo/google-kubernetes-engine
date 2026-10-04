@@ -72,7 +72,7 @@ gcloud container clusters create gke-dev \
 gcloud container clusters delete gke-dev --region us-central1
 ```
 
-### Delete Cloud NATs
+### Delete Cloud NAT
 
 ```shell
 gcloud compute routers nats delete gke-nat \
