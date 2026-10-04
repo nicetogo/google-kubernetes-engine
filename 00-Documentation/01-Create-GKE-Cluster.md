@@ -34,6 +34,10 @@ This is necessary for some labs. Create it only if you are going to work on the 
 
 ```shell
 gcloud compute addresses create gke-ingress-extip1 --global
+
+gcloud compute addresses describe gke-ingress-extip1 --global
+
+gcloud compute addresses list
 ```
 
 ### Create Private Regional GKE Cluster
