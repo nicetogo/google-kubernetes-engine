@@ -48,7 +48,8 @@ gcloud container clusters create gke-dev \
   --enable-master-authorized-networks \
   --master-authorized-networks "0.0.0.0/0" \
   --workload-pool="${PROJECT_ID}.svc.id.goog" \
-  --addons GcpFilestoreCsiDriver
+  --addons GcpFilestoreCsiDriver \
+  --enable-secret-manager
 ```
 
 ## Delete Infrastructure
