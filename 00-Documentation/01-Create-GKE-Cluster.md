@@ -28,6 +28,14 @@ gcloud compute routers nats create gke-nat \
   --nat-all-subnet-ip-ranges
 ```
 
+### Create External IP Address
+
+This is necessary for some labs. Create it only if you are going to work on the labs.
+
+```shell
+gcloud compute addresses create gke-ingress-extip1 --global
+```
+
 ### Create Private Regional GKE Cluster
 
 ```shell
@@ -73,4 +81,10 @@ gcloud compute routers nats delete gke-nat \
 ```shell
 gcloud compute routers delete gke-router \
   --region us-central1
+```
+
+### Delete the External IP Address
+
+```shell
+gcloud compute addresses delete gke-ingress-extip1 --global
 ```
