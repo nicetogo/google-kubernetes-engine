@@ -40,6 +40,23 @@ gcloud compute addresses describe gke-ingress-extip1 --global
 gcloud compute addresses list
 ```
 
+### Create Service Account
+
+```shell
+gcloud projects list
+gcloud iam service-accounts create wid-gcpiam-sa --project=development-373903 --display-name="Workload Identity Service Account"
+
+gcloud iam service-accounts list
+```
+
+### Add IAM Roles to GCP IAM Service Account
+
+```shell
+gcloud projects add-iam-policy-binding development-373903 \
+  --member "serviceAccount:wid-gcpiam-sa@development-373903.iam.gserviceaccount.com" \
+  --role "roles/compute.viewer"
+```
+
 ### Create Private Regional GKE Cluster
 
 ```shell
